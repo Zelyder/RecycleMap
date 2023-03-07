@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Recycle map</string>
+    <string name="home_feed">Home</string>
+    <string name="home_map">Map</string>
+    <string name="home_learn">Learning</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiemVseWRlciIsImEiOiJjbDh3djBwZ2IwMGZnM25teDlqdDBtN2g4In0.i4Lo1AutMznmPx79qgZtsw</string>
+</resources>
