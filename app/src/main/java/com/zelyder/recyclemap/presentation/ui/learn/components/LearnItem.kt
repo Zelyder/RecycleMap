@@ -30,7 +30,7 @@ fun LearnItem(title: String, imageId: Int, modifier: Modifier = Modifier) {
             text = title,
             modifier = Modifier.align(Alignment.Center),
             color = Color.White,
-            fontSize = 32.sp,
+            fontSize = 26.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center
         )
@@ -38,7 +38,7 @@ fun LearnItem(title: String, imageId: Int, modifier: Modifier = Modifier) {
 }
 @Preview
 @Composable
-fun prev() {
+fun LearnItemPrev() {
     LearnItem(title = "Пластик", imageId = R.drawable.plastic)
 
 }

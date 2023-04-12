@@ -91,22 +91,44 @@ data class Feed(
     val shortDescription: String,
     val imageUrl: String,
 )
+
 // https://ztbo.ru/o-tbo/stati/obshchie-stati
 val feedList = listOf(
-Feed("Методы и способы переработки мусора (ТБО)", "В нашем мире, благодаря тому, что численность населения постоянно увеличивается, потребление ресурсов также неуклонно растет. А потребление восстанавливаемых ресурсов и невосстанавливаемых ресурсов сопровождается увеличением количества отходов. Мусорные свалки, загрязнение водоемов – это все то, к чему приводит жизнедеятельность человека.",
-    "https://ztbo.ru/file/images/metodi-i-sposobi-pererabotki-musora-tbo.png"),
-Feed("Технология переработки мусора (ТБО)", "Сегодня как никогда более актуальной является проблема утилизации бытовых отходов, неизменно образующихся в процессе жизнедеятельности человека. Эти отходы, постепенно накапливаясь, уже превратились в самое настоящее бедствие. Поэтому правительства технологически развитых стран начинают уделять все большее внимание вопросам охраны окружающей среды, поощряя новые технологии переработки мусора.",
-    "https://ztbo.ru/file/images/tehnologija-pererabotki-musora-tbo.png"),
-Feed("Проблемы переработки мусора (ТБО)", "Всем известно, как организованы утилизация и сбор твердых бытовых отходов в Западной Европе. В этих странах была сделана ставка на раздельный сбор, максимальное возможное извлечение вторичного сырья и комплексную переработку отходов, благодаря чему любой европейский полигон отходов (ТБО) отличается от отечественного как небо и земля.",
-    "https://ztbo.ru/file/images/problemi-pererabotki-musora-tbo.png"),
-Feed("Переработка мусора (ТБО) в топливо", "Дорога цивилизации вымощена горами мусора. Это неудивительно, ведь потребление благ цивилизации постоянно растет, а с ним растет и количество отходов. Красочные упаковки, одноразовые изделия и еще многое из того, что делается для широкого потребления, неизменно превращается в утиль.",
-    "https://ztbo.ru/file/images/pererabotka-musora-tbo-v-toplivo.png"),
-Feed("«Мусорный рынок»", "Проблема утилизации твердых бытовых отходов становится острее и острее с каждым годом, отражаясь на экологической ситуации нашей планеты. Деятельность по сбору и вторичной переработке мусора уже давно стала прибыльным занятием в западных странах, однако в России и СНГ данная отрасль рынка развита недостаточно хорошо, даже не смотря на то, что завод по переработке мусора есть сегодня практически в каждом крупном городе.",
-    "https://ztbo.ru/file/images/musornij-rinok.png"),
-Feed("Оборудование для утилизации мусора: прессы, компакторы, шредеры, контейнеры, сортировочные линии", "Утилизация отходов в нашей стране постепенно превратилась из деятельности, которая направленна исключительно на защиту окружающей среды в перспективный высокодоходный бизнес. Это и понятно, ведь многие ресурсы сегодня гораздо проще не добывать из земных недр, а получать путем переработки отходов.",
-    "https://ztbo.ru/file/images/oborudovanie-dlya-utilizacii-musora.png"),
-Feed("Утилизация мусора в России", "Применяемая сегодня в большинстве развитых стран мира переработка бытового мусора является самым важным звеном в длинной цепи процедуры утилизации бытовых отходов. Но если в Европе, Америке Китае и в других странах, отличающихся высоким уровнем технического развития, подобная практика применяется уже достаточно давно, то в России внедрение новых технологий в области переработки вторсырья находится в зародышевом состоянии, и только набирает обороты.",
-    "https://ztbo.ru/file/images/utilizaciya-musora-v-rossii.png")
+    Feed(
+        "Методы и способы переработки мусора (ТБО)",
+        "В нашем мире, благодаря тому, что численность населения постоянно увеличивается, потребление ресурсов также неуклонно растет. А потребление восстанавливаемых ресурсов и невосстанавливаемых ресурсов сопровождается увеличением количества отходов. Мусорные свалки, загрязнение водоемов – это все то, к чему приводит жизнедеятельность человека.",
+        "https://ztbo.ru/file/images/metodi-i-sposobi-pererabotki-musora-tbo.png"
+    ),
+    Feed(
+        "Технология переработки мусора (ТБО)",
+        "Сегодня как никогда более актуальной является проблема утилизации бытовых отходов, неизменно образующихся в процессе жизнедеятельности человека. Эти отходы, постепенно накапливаясь, уже превратились в самое настоящее бедствие. Поэтому правительства технологически развитых стран начинают уделять все большее внимание вопросам охраны окружающей среды, поощряя новые технологии переработки мусора.",
+        "https://ztbo.ru/file/images/tehnologija-pererabotki-musora-tbo.png"
+    ),
+    Feed(
+        "Проблемы переработки мусора (ТБО)",
+        "Всем известно, как организованы утилизация и сбор твердых бытовых отходов в Западной Европе. В этих странах была сделана ставка на раздельный сбор, максимальное возможное извлечение вторичного сырья и комплексную переработку отходов, благодаря чему любой европейский полигон отходов (ТБО) отличается от отечественного как небо и земля.",
+        "https://ztbo.ru/file/images/problemi-pererabotki-musora-tbo.png"
+    ),
+    Feed(
+        "Переработка мусора (ТБО) в топливо",
+        "Дорога цивилизации вымощена горами мусора. Это неудивительно, ведь потребление благ цивилизации постоянно растет, а с ним растет и количество отходов. Красочные упаковки, одноразовые изделия и еще многое из того, что делается для широкого потребления, неизменно превращается в утиль.",
+        "https://ztbo.ru/file/images/pererabotka-musora-tbo-v-toplivo.png"
+    ),
+    Feed(
+        "«Мусорный рынок»",
+        "Проблема утилизации твердых бытовых отходов становится острее и острее с каждым годом, отражаясь на экологической ситуации нашей планеты. Деятельность по сбору и вторичной переработке мусора уже давно стала прибыльным занятием в западных странах, однако в России и СНГ данная отрасль рынка развита недостаточно хорошо, даже не смотря на то, что завод по переработке мусора есть сегодня практически в каждом крупном городе.",
+        "https://ztbo.ru/file/images/musornij-rinok.png"
+    ),
+    Feed(
+        "Оборудование для утилизации мусора: прессы, компакторы, шредеры, контейнеры, сортировочные линии",
+        "Утилизация отходов в нашей стране постепенно превратилась из деятельности, которая направленна исключительно на защиту окружающей среды в перспективный высокодоходный бизнес. Это и понятно, ведь многие ресурсы сегодня гораздо проще не добывать из земных недр, а получать путем переработки отходов.",
+        "https://ztbo.ru/file/images/oborudovanie-dlya-utilizacii-musora.png"
+    ),
+    Feed(
+        "Утилизация мусора в России",
+        "Применяемая сегодня в большинстве развитых стран мира переработка бытового мусора является самым важным звеном в длинной цепи процедуры утилизации бытовых отходов. Но если в Европе, Америке Китае и в других странах, отличающихся высоким уровнем технического развития, подобная практика применяется уже достаточно давно, то в России внедрение новых технологий в области переработки вторсырья находится в зародышевом состоянии, и только набирает обороты.",
+        "https://ztbo.ru/file/images/utilizaciya-musora-v-rossii.png"
+    )
 )
 
 @Composable
@@ -122,22 +144,43 @@ fun FeedScreen() {
         }
     }
 }
+
 data class LItem(
-    val title: String,
-    val image: Int
+    val id: Int,
+    val title: Int,
+    val image: Int,
+    val description: Int,
 )
+
 val learnList = listOf(
-    LItem("Пластик", R.drawable.plastic),
-    LItem("Бумага", R.drawable.paper),
-    LItem("Стекло", R.drawable.glass),
-    LItem("Металл", R.drawable.metal),
-    LItem("Одежда", R.drawable.clothes),
-    LItem("Опасные отходы", R.drawable.hazardous_waste),
-    LItem("Батарейки", R.drawable.batteries),
-    LItem("Лампочки", R.drawable.light_bulbs),
-    LItem("Бытовая техника", R.drawable.appliances),
-    LItem("Тетра пак", R.drawable.tetra_pack),
-    LItem("Крышечки", R.drawable.caps),
+    LItem(id = 0, R.string.plastic, R.drawable.plastic, R.string.plastic_description),
+    LItem(id = 1, R.string.paper, R.drawable.paper, R.string.paper_description),
+    LItem(id = 2, R.string.metal, R.drawable.metal, R.string.metal_description),
+    LItem(
+        id = 3,
+        R.string.organic_materials,
+        R.drawable.organic_materials,
+        R.string.cloth_description
+    ),
+    LItem(id = 4, R.string.glass, R.drawable.glass, R.string.glass_description),
+    LItem(
+        id = 5,
+        R.string.composite_materials,
+        R.drawable.composite_materials,
+        R.string.hazardous_waste_description
+    ),
+    LItem(id = 6, R.string.batteries, R.drawable.batteries, R.string.batteries_description),
+    LItem(
+        id = 7,
+        R.string.hazardous_waste,
+        R.drawable.hazardous_waste,
+        R.string.hazardous_waste_description
+    ),
+    LItem(id = 8, R.string.cloth, R.drawable.clothes, R.string.cloth_description),
+    LItem(id = 9, R.string.light_bulbs, R.drawable.light_bulbs, R.string.light_bulbs_description),
+    LItem(id = 10, R.string.appliances, R.drawable.appliances, R.string.appliances_description),
+    LItem(id = 11, R.string.tetra_pack, R.drawable.tetra_pack, R.string.tetra_pack_description),
+    LItem(id = 12, R.string.caps, R.drawable.caps, R.string.caps_description),
 )
 
 @Composable
@@ -149,12 +192,18 @@ fun LearnScreen(externalRouter: Router) {
         contentPadding = PaddingValues(16.dp)
     ) {
         items(learnList) { item ->
-            LearnItem(title = item.title, imageId = item.image, modifier = Modifier.clickable {
-                val bundle = Bundle().apply {
-                    putString(NavConst.LEARN_DETAILS_SCREEN_TITLE, item.title)
-                }
-                externalRouter.routeTo(NavScreen.NavLearnDetailsScreen(item.title).route, bundle)
-            })
+            LearnItem(
+                title = stringResource(id = item.title),
+                imageId = item.image,
+                modifier = Modifier.clickable {
+                    val bundle = Bundle().apply {
+                        putInt(NavConst.LEARN_DETAILS_SCREEN_ID, item.id)
+                    }
+                    externalRouter.routeTo(
+                        NavScreen.NavLearnDetailsScreen(item.id.toString()).route,
+                        bundle
+                    )
+                })
         }
     }
     Spacer(modifier = Modifier.height(16.dp))

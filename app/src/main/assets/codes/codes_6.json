@@ -1,0 +1,53 @@
+{
+    "data": [
+        {
+            "code": "8",
+            "iso": "Pb",
+            "description": "Свинцово-кислотный аккумулятор",
+            "examples": "Автомобильные аккумуляторы",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "9",
+            "iso": "Alkaline",
+            "description": "Щелочной элемент",
+            "examples": "",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "10",
+            "iso": "Ni-Cd",
+            "description": "Никель-кадмиевый аккумулятор",
+            "examples": "",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "11",
+            "iso": "Ni-MH",
+            "description": "Никель-металл-гидридный аккумулятор",
+            "examples": "",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "12",
+            "iso": "Li-ion",
+            "description": "Литиевый элемент",
+            "examples": "",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "13",
+            "iso": "SO(Z)",
+            "description": "Серебряно-цинковый аккумулятор",
+            "examples": "",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "14",
+            "iso": "CZ",
+            "description": "Марганцево-цинковый элемент",
+            "examples": "",
+            "isNotRecyclable": false
+        }
+    ]
+}

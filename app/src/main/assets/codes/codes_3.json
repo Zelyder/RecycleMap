@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "code": "50",
+            "iso": "FOR",
+            "description": "Древесина",
+            "examples": "Деревянные издения",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "51",
+            "iso": "FOR",
+            "description": "Пробка",
+            "examples": "Бутылочные пробки, подставки для горячих чашек/тарелок, стельки, поплавки",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "60",
+            "iso": "TEX",
+            "description": "Хлопок",
+            "examples": "Вата",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "61",
+            "iso": "TEX",
+            "description": "Джутовое волокно",
+            "examples": "Мешки, канаты",
+            "isNotRecyclable": false
+        }
+    ]
+}

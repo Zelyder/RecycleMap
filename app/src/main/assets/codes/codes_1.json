@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "code": "20",
+            "iso": "PAP",
+            "description": "Гофрированный картон \n (PAP,PCB)",
+            "examples": "Коробки от бытовой техники, продуктов, косметики",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "21",
+            "iso": "PAP",
+            "description": "Прочий картон",
+            "examples": "Открытки, обложки книг, короб-упаковка",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "22",
+            "iso": "PAP",
+            "description": "Бумага",
+            "examples": "Журналы и газеты, конверты, бумажные пакеты, бумага для печати",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "23",
+            "iso": "PAP",
+            "description": "Вощёная бумага\n(PBD, PPB)",
+            "examples": "Упаковка для почтовых отправлений или для декора букетов",
+            "isNotRecyclable": false
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "data": [
+        {
+            "code": "80",
+            "iso": "",
+            "description": "Бумага (картон) / различные материалы",
+            "examples": "Упаковка от бургеров в Бургер Кинге",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "81",
+            "iso": "Pap Pet",
+            "description": "Бумага (картон) / пластик",
+            "examples": "Упаковки для кондитерских изделий, упаковка некоторых видов молока (тетрапак)",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "83",
+            "iso": "",
+            "description": "Бумага (картон) / белая жесть",
+            "examples": "",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "84",
+            "iso": "C/PAP",
+            "description": "Бумага (картон) / пластик / алюминий",
+            "examples": "Упаковки для сока (тетрапак), упаковка от чипсов «Pringles», коробки от сухих смесей Nutrilon",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "85",
+            "iso": "",
+            "description": "\tБумага (картон) / пластик / алюминий / жесть",
+            "examples": "",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "87",
+            "iso": "",
+            "description": "Биоразлагаемый пластик",
+            "examples": "Используется для ламината, закладки, визитки, флаеры/листовки",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "90",
+            "iso": "",
+            "description": "Пластик / алюминий",
+            "examples": "Антистатические пакеты, упаковка еды быстрого приготовления, металлизированные пакеты, пробки с пластмассовой втулкой-вкладышем",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "91",
+            "iso": "",
+            "description": "Пластик / белая жесть",
+            "examples": "Крышка баночек — основа из жести, изнутри покрытая пластиком, обеспечивающим герметизацию",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "92",
+            "iso": "",
+            "description": "Пластик / различные металлы",
+            "examples": "Упаковка",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "95",
+            "iso": "",
+            "description": "Стекло / пластик",
+            "examples": "",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "96",
+            "iso": "",
+            "description": "Стекло / алюминий",
+            "examples": "",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "97",
+            "iso": "C/GL",
+            "description": "Стекло / белая жесть",
+            "examples": "",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "98",
+            "iso": "C/GL",
+            "description": "Стекло / различные металлы",
+            "examples": "Банка из-под растворимого кофе с крышкой-клапаном, содержащей фольгу",
+            "isNotRecyclable": false
+        }
+    ]
+}

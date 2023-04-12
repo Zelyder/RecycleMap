@@ -7,6 +7,6 @@ class DeleteLearnItemUseCase(
     private val repository: LearnRepository
 ) {
     suspend operator fun invoke(learnEntity: LearnEntity) {
-        repository.deleteLearnItem(learnEntity)
+//        repository.deleteLearnItem(learnEntity)
     }
 }

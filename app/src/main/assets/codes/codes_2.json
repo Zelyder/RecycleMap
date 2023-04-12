@@ -1,0 +1,18 @@
+{
+    "data": [
+        {
+            "code": "40",
+            "iso": "FE",
+            "description": "Железо, Сталь",
+            "examples": "Банки из-под сгущённого молока, кофе, консервов, некоторых марок пива",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "41",
+            "iso": "ALU",
+            "description": "Алюминий",
+            "examples": "Алюминиевые банки. Тюбики для крема",
+            "isNotRecyclable": false
+        }
+    ]
+}

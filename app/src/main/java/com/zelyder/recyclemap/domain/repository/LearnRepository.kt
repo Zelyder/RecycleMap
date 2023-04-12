@@ -1,13 +1,8 @@
 package com.zelyder.recyclemap.domain.repository
 
-import com.zelyder.recyclemap.domain.model.LearnEntity
-import kotlinx.coroutines.flow.Flow
+import com.zelyder.recyclemap.domain.model.RecycleCode
 
 interface LearnRepository {
+    suspend fun getCodesList(id: Int): List<RecycleCode>
 
-    fun getLearnList(): Flow<List<LearnEntity>>
-
-    suspend fun insertLearnItem(learnEntity: LearnEntity)
-
-    suspend fun deleteLearnItem(learnEntity: LearnEntity)
 }
