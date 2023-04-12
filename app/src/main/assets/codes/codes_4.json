@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "code": "70",
+            "iso": "GL",
+            "description": "Бесцветное стекло",
+            "examples": "Прозрачное стекло",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "71",
+            "iso": "GL",
+            "description": "Зелёное стекло",
+            "examples": "Используется в производстве бутылок",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "72",
+            "iso": "GL",
+            "description": "Коричневое стекло",
+            "examples": "Используется в производстве бутылок и баночек для эфирных масел",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "73",
+            "iso": "GL",
+            "description": "бутылочное стекло тёмно-\nкоричневое",
+            "examples": "Используется в производстве бутылок",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "74",
+            "iso": "GL",
+            "description": "Бутылочное стекло светло-коричневое",
+            "examples": "Используется в производстве бутылок",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "75",
+            "iso": "GL",
+            "description": "Стекло с малым содержанием свинца",
+            "examples": "Используется в современных телевизорах и электронных приборах",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "76",
+            "iso": "GL",
+            "description": "Хрусталь",
+            "examples": "Используется в хрустальной посуде",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "77",
+            "iso": "GL",
+            "description": "Стекло, покрытое медью",
+            "examples": "Используется в электронике, часах",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "78",
+            "iso": "GL",
+            "description": "Стекло, покрытое серебром",
+            "examples": "Используется в зеркале, посуде для сервировки",
+            "isNotRecyclable": false
+        },
+        {
+            "code": "79",
+            "iso": "GL",
+            "description": "Позолоченное стекло",
+            "examples": "Используется в посуде для сервировки",
+            "isNotRecyclable": false
+        }
+    ]
+}
