@@ -33,6 +33,8 @@ import com.zelyder.recyclemap.presentation.ui.learn.components.LearnItem
 import com.zelyder.recyclemap.presentation.navigation.NavConst
 import com.zelyder.recyclemap.presentation.navigation.NavScreen
 import com.zelyder.recyclemap.presentation.navigation.Router
+import java.net.URLEncoder
+import java.nio.charset.StandardCharsets
 
 enum class HomeSelections(
     @StringRes val title: Int,
@@ -88,57 +90,69 @@ fun BottomNavigationBar(
 
 data class Feed(
     val title: String,
-    val shortDescription: String,
     val imageUrl: String,
+    val date: String,
+    val url: String
 )
 
 // https://ztbo.ru/o-tbo/stati/obshchie-stati
 val feedList = listOf(
     Feed(
         "Методы и способы переработки мусора (ТБО)",
-        "В нашем мире, благодаря тому, что численность населения постоянно увеличивается, потребление ресурсов также неуклонно растет. А потребление восстанавливаемых ресурсов и невосстанавливаемых ресурсов сопровождается увеличением количества отходов. Мусорные свалки, загрязнение водоемов – это все то, к чему приводит жизнедеятельность человека.",
-        "https://ztbo.ru/file/images/metodi-i-sposobi-pererabotki-musora-tbo.png"
+        "https://ztbo.ru/file/images/metodi-i-sposobi-pererabotki-musora-tbo.png",
+        "Апр 21, 2023",
+        "Петр"
     ),
     Feed(
         "Технология переработки мусора (ТБО)",
-        "Сегодня как никогда более актуальной является проблема утилизации бытовых отходов, неизменно образующихся в процессе жизнедеятельности человека. Эти отходы, постепенно накапливаясь, уже превратились в самое настоящее бедствие. Поэтому правительства технологически развитых стран начинают уделять все большее внимание вопросам охраны окружающей среды, поощряя новые технологии переработки мусора.",
-        "https://ztbo.ru/file/images/tehnologija-pererabotki-musora-tbo.png"
+        "https://ztbo.ru/file/images/tehnologija-pererabotki-musora-tbo.png",
+        "Апр 21, 2023",
+        "https://radiosputnik.ria.ru/20230420/podmoskove-1866733479.html"
     ),
     Feed(
         "Проблемы переработки мусора (ТБО)",
-        "Всем известно, как организованы утилизация и сбор твердых бытовых отходов в Западной Европе. В этих странах была сделана ставка на раздельный сбор, максимальное возможное извлечение вторичного сырья и комплексную переработку отходов, благодаря чему любой европейский полигон отходов (ТБО) отличается от отечественного как небо и земля.",
-        "https://ztbo.ru/file/images/problemi-pererabotki-musora-tbo.png"
+        "https://ztbo.ru/file/images/problemi-pererabotki-musora-tbo.png",
+        "Апр 21, 2023",
+        "https://radiosputnik.ria.ru/20230420/podmoskove-1866733479.html"
     ),
     Feed(
         "Переработка мусора (ТБО) в топливо",
-        "Дорога цивилизации вымощена горами мусора. Это неудивительно, ведь потребление благ цивилизации постоянно растет, а с ним растет и количество отходов. Красочные упаковки, одноразовые изделия и еще многое из того, что делается для широкого потребления, неизменно превращается в утиль.",
-        "https://ztbo.ru/file/images/pererabotka-musora-tbo-v-toplivo.png"
+        "https://ztbo.ru/file/images/pererabotka-musora-tbo-v-toplivo.png",
+        "Апр 21, 2023",
+        "https://radiosputnik.ria.ru/20230420/podmoskove-1866733479.html"
     ),
     Feed(
         "«Мусорный рынок»",
-        "Проблема утилизации твердых бытовых отходов становится острее и острее с каждым годом, отражаясь на экологической ситуации нашей планеты. Деятельность по сбору и вторичной переработке мусора уже давно стала прибыльным занятием в западных странах, однако в России и СНГ данная отрасль рынка развита недостаточно хорошо, даже не смотря на то, что завод по переработке мусора есть сегодня практически в каждом крупном городе.",
-        "https://ztbo.ru/file/images/musornij-rinok.png"
+        "https://ztbo.ru/file/images/musornij-rinok.png",
+        "Апр 21, 2023",
+        "https://radiosputnik.ria.ru/20230420/podmoskove-1866733479.html"
     ),
     Feed(
         "Оборудование для утилизации мусора: прессы, компакторы, шредеры, контейнеры, сортировочные линии",
-        "Утилизация отходов в нашей стране постепенно превратилась из деятельности, которая направленна исключительно на защиту окружающей среды в перспективный высокодоходный бизнес. Это и понятно, ведь многие ресурсы сегодня гораздо проще не добывать из земных недр, а получать путем переработки отходов.",
-        "https://ztbo.ru/file/images/oborudovanie-dlya-utilizacii-musora.png"
+        "https://ztbo.ru/file/images/oborudovanie-dlya-utilizacii-musora.png",
+        "Апр 21, 2023",
+        "https://radiosputnik.ria.ru/20230420/podmoskove-1866733479.html"
     ),
     Feed(
         "Утилизация мусора в России",
-        "Применяемая сегодня в большинстве развитых стран мира переработка бытового мусора является самым важным звеном в длинной цепи процедуры утилизации бытовых отходов. Но если в Европе, Америке Китае и в других странах, отличающихся высоким уровнем технического развития, подобная практика применяется уже достаточно давно, то в России внедрение новых технологий в области переработки вторсырья находится в зародышевом состоянии, и только набирает обороты.",
-        "https://ztbo.ru/file/images/utilizaciya-musora-v-rossii.png"
+        "https://ztbo.ru/file/images/utilizaciya-musora-v-rossii.png",
+        "Апр 21, 2023",
+        "https://radiosputnik.ria.ru/20230420/podmoskove-1866733479.html"
     )
 )
 
 @Composable
-fun FeedScreen() {
+fun FeedScreen(externalRouter: Router) {
     LazyColumn() {
         items(feedList) { item ->
             FeedItem(
                 title = item.title,
                 imageUrl = item.imageUrl,
-                shortDescription = item.shortDescription
+                date = item.date,
+                modifier = Modifier.clickable {
+                    val encodedUrl = URLEncoder.encode(item.url, StandardCharsets.UTF_8.toString())
+                    externalRouter.routeTo(NavScreen.NavFeedDetailsScreen(encodedUrl).route)
+                }
             )
             Spacer(modifier = Modifier.height(16.dp))
         }

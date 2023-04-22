@@ -51,7 +51,7 @@ fun HomeScreen(router: Router) {
 private fun Navigation(navController: NavHostController, router: Router) {
     NavHost(navController = navController, startDestination = NavScreen.NavFeedScreen.route) {
         composable(NavScreen.NavFeedScreen.route) {
-            FeedScreen()
+            FeedScreen(externalRouter = router)
         }
         composable(NavScreen.NavMapScreen.route) {
             MapScreen()

@@ -8,5 +8,5 @@ sealed class NavScreen(val route: String, val titleResourceId: Int = -1) {
     object NavLearnScreen: NavScreen("home/learn")
 
     data class NavLearnDetailsScreen(val id: String) : NavScreen("home/learn/details/$id")
-    data class NavFeedDetails(val endPoint: String) : NavScreen("home/feed/$endPoint")
+    data class NavFeedDetailsScreen(val endPoint: String) : NavScreen("home/feed/details/$endPoint")
 }
