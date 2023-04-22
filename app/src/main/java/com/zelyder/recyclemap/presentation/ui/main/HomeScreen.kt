@@ -14,7 +14,9 @@ import androidx.navigation.compose.rememberNavController
 import com.zelyder.recyclemap.presentation.navigation.NavScreen
 import com.zelyder.recyclemap.presentation.navigation.Router
 import com.zelyder.recyclemap.presentation.navigation.createExternalRouter
+import com.zelyder.recyclemap.presentation.ui.feed.FeedScreen
 import com.zelyder.recyclemap.presentation.ui.home.*
+import com.zelyder.recyclemap.presentation.ui.learn.LearnScreen
 import com.zelyder.recyclemap.presentation.ui.map.MapScreen
 import com.zelyder.recyclemap.presentation.ui.theme.RecycleMapTheme
 

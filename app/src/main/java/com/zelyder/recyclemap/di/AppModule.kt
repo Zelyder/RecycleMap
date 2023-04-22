@@ -1,12 +1,18 @@
 package com.zelyder.recyclemap.di
 
 import android.app.Application
+import com.zelyder.recyclemap.data.data_source.EcosphereNews
+import com.zelyder.recyclemap.data.data_source.News
+import com.zelyder.recyclemap.data.repository.FeedRepositoryImpl
 import com.zelyder.recyclemap.data.repository.LearnRepositoryImpl
+import com.zelyder.recyclemap.domain.repository.FeedRepository
 import com.zelyder.recyclemap.domain.repository.LearnRepository
 import com.zelyder.recyclemap.domain.use_case.DeleteLearnItemUseCase
 import com.zelyder.recyclemap.domain.use_case.GetCodesListUseCase
 import com.zelyder.recyclemap.domain.use_case.GetLearnListUseCase
 import com.zelyder.recyclemap.domain.use_case.LearnUseCases
+import com.zelyder.recyclemap.domain.use_case.feed.FeedUseCases
+import com.zelyder.recyclemap.domain.use_case.feed.GetFeedListUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -29,8 +35,20 @@ object AppModule {
 
     @Provides
     @Singleton
+    fun provideNews(): News {
+        return EcosphereNews()
+    }
+
+    @Provides
+    @Singleton
     fun provideLearnRepository(app: Application): LearnRepository {
         return LearnRepositoryImpl(app)
+    }
+
+    @Provides
+    @Singleton
+    fun provideFeedRepository(news: News): FeedRepository {
+        return FeedRepositoryImpl(news)
     }
 
     @Provides
@@ -40,6 +58,14 @@ object AppModule {
             getLearnList = GetLearnListUseCase(repository),
             deleteLearnItem = DeleteLearnItemUseCase(repository),
             getCodesList = GetCodesListUseCase(repository)
+        )
+    }
+
+    @Provides
+    @Singleton
+    fun provideFeedUseCases(repository: FeedRepository): FeedUseCases {
+        return FeedUseCases(
+            getFeedListUseCase = GetFeedListUseCase(repository)
         )
     }
 }

@@ -6,11 +6,15 @@ import com.google.accompanist.web.WebView
 import com.google.accompanist.web.rememberWebViewState
 
 @Composable
-fun FeedDetailsScreen(url: String?) {
+fun FeedDetailsScreen(
+    url: String?
+) {
     url?.let {
+
         val state = rememberWebViewState(url = it)
         WebView(
-            state
+            state = state,
+            onCreated = { it.settings.javaScriptEnabled = true }
         )
     } ?: Text(text = "Пустрой URL")
 }
