@@ -1,8 +1,9 @@
 package com.zelyder.recyclemap.di
 
 import android.app.Application
-import com.zelyder.recyclemap.data.data_source.News
+import com.zelyder.recyclemap.data.data_source.EcosocietyNews
 import com.zelyder.recyclemap.data.data_source.RiaNews
+import com.zelyder.recyclemap.data.data_source.RsborNews
 import com.zelyder.recyclemap.data.repository.FeedRepositoryImpl
 import com.zelyder.recyclemap.data.repository.LearnRepositoryImpl
 import com.zelyder.recyclemap.domain.repository.FeedRepository
@@ -23,22 +24,6 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-//    @Provides
-//    @Singleton
-//    fun provideLearnDatabase(app: Application): LearnDatabase {
-//        return Room.databaseBuilder(
-//            app,
-//            LearnDatabase::class.java,
-//            LearnDatabase.DATABASE_NAME
-//        ).build()
-//    }
-
-    @Provides
-    @Singleton
-    fun provideNews(): News {
-        return RiaNews()
-    }
-
     @Provides
     @Singleton
     fun provideLearnRepository(app: Application): LearnRepository {
@@ -47,8 +32,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideFeedRepository(news: News): FeedRepository {
-        return FeedRepositoryImpl(news)
+    fun provideFeedRepository(): FeedRepository {
+        return FeedRepositoryImpl(listOf(EcosocietyNews(), RsborNews(), RiaNews()))
     }
 
     @Provides

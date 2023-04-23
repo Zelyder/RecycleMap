@@ -6,8 +6,8 @@ import com.zelyder.recyclemap.domain.repository.FeedRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class FeedRepositoryImpl(val news: News): FeedRepository {
+class FeedRepositoryImpl(val newsList: List<News>): FeedRepository {
     override suspend fun getFeedList(): List<Feed> = withContext(Dispatchers.IO){
-        news.fetch()
+        newsList.map { it.fetch() }.flatten()
     }
 }
