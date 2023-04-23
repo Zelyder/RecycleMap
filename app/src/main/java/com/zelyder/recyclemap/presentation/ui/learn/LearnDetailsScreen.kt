@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -55,7 +56,7 @@ fun LearnDetailsScreen(
                             text = stringResource(id = item.title),
                             style = MaterialTheme.typography.h3,
                             textAlign = TextAlign.Center,
-                            color = MaterialTheme.colors.onPrimary,
+                            color = Color.White,
                         )
                     }
                 }

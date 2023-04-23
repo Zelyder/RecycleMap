@@ -2,10 +2,7 @@ package com.zelyder.recyclemap.presentation.ui.home
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Column
-import androidx.compose.material.BottomNavigation
-import androidx.compose.material.BottomNavigationItem
-import androidx.compose.material.Icon
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.ImportContacts
@@ -47,7 +44,7 @@ fun BottomNavigationBar(
     val backStackEntry = navController.currentBackStackEntryAsState()
     BottomNavigation(
         modifier = modifier,
-        backgroundColor = Color.DarkGray,
+        backgroundColor = MaterialTheme.colors.background,
         elevation = 5.dp
     ) {
         items.forEach { item ->
