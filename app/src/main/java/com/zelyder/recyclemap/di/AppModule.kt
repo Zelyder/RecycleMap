@@ -1,7 +1,7 @@
 package com.zelyder.recyclemap.di
 
 import android.app.Application
-import com.zelyder.recyclemap.data.data_source.EcosphereNews
+import com.zelyder.recyclemap.data.data_source.EcosocietyNews
 import com.zelyder.recyclemap.data.data_source.News
 import com.zelyder.recyclemap.data.repository.FeedRepositoryImpl
 import com.zelyder.recyclemap.data.repository.LearnRepositoryImpl
@@ -36,7 +36,7 @@ object AppModule {
     @Provides
     @Singleton
     fun provideNews(): News {
-        return EcosphereNews()
+        return EcosocietyNews()
     }
 
     @Provides
