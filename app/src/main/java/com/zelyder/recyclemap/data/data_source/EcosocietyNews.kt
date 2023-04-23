@@ -14,7 +14,7 @@ class EcosocietyNews: News {
         val list = mutableListOf<Feed>()
 
         for (article in articles) {
-            val img = article.select("img[src$=.jpg]")
+            val img = article.select("img")
             val imgUrl = img.attr("src")
             val title = img.attr("alt")
             val url = article.select("div h3 a").attr("href")
