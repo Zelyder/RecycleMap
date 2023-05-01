@@ -1,25 +1,29 @@
 package com.zelyder.recyclemap.data.data_source
 
 import com.zelyder.recyclemap.domain.model.Feed
-import kotlinx.coroutines.test.runTest
+import kotlinx.coroutines.runBlocking
 import org.jsoup.Jsoup
 import org.junit.Assert
 import org.junit.Test
 
 class NewsTest {
 
-
-    private fun isParsingNewsHtmlCorrect(news: News, fileName: String, expectedList: List<Feed>) =
-        runTest {
-            val file = this.javaClass.getResource("$fileName")?.readText()
-            val doc = file?.let { Jsoup.parse(it) }
-            if (doc != null) {
-                val list = news.fetch(doc)
-                Assert.assertEquals(expectedList, list)
-            } else {
-                assert(false)
-            }
+    private fun isParsingNewsHtmlCorrect(
+        news: News,
+        fileName: String,
+        expectedList: List<Feed>
+    ) = runBlocking {
+        val file = this.javaClass.getResource(fileName)?.readText()
+        val doc = file?.let { Jsoup.parse(it) }
+        if (doc != null) {
+            val list = news.fetch(doc)
+            Assert.assertEquals(expectedList, list)
+        } else {
+            assert(false)
         }
+    }
+
+
 
     @Test
     fun isParsingEcosocietyHtmlCorrect() {
