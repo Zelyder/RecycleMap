@@ -14,6 +14,7 @@ import com.mapbox.maps.MapView
 import com.mapbox.maps.Style
 import com.zelyder.recyclemap.R
 import com.zelyder.recyclemap.presentation.navigation.*
+import com.zelyder.recyclemap.presentation.ui.feed.FeedDetailsScreen
 import com.zelyder.recyclemap.presentation.ui.learn.LearnDetailsScreen
 import com.zelyder.recyclemap.presentation.ui.main.HomeScreen
 import com.zelyder.recyclemap.presentation.ui.theme.RecycleMapTheme
@@ -49,6 +50,14 @@ class MainActivity : ComponentActivity() {
 
                         }
                         composable(
+                            route = NavScreen.NavFeedDetailsScreen(
+                                "{${NavConst.FEED_DETAILS_SCREEN_ID}}"
+                            ).route
+                        ) {
+                            val url = it.arguments?.getString(NavConst.FEED_DETAILS_SCREEN_ID)
+                            FeedDetailsScreen(url)
+                        }
+                        composable(
                             NavScreen.NavLearnDetailsScreen(
                                 "{${NavConst.LEARN_DETAILS_SCREEN_ID}}"
                             ).route,
@@ -59,6 +68,7 @@ class MainActivity : ComponentActivity() {
                             val id = it.arguments?.getInt(NavConst.LEARN_DETAILS_SCREEN_ID)
                             LearnDetailsScreen(id = id)
                         }
+
                     }
                 }
             }
