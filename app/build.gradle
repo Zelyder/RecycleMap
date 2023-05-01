@@ -65,6 +65,7 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.15.4'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.0-RC'
     implementation 'com.google.accompanist:accompanist-systemuicontroller:0.31.0-alpha'
+    implementation 'androidx.appcompat:appcompat-resources:1.6.1'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -77,6 +78,7 @@ dependencies {
     implementation ('com.mapbox.maps:android:10.8.1'){
         exclude group: 'group_name', module: 'module_name'
     }
+    implementation("com.google.android.gms:play-services-location:21.0.1")
     // room
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"

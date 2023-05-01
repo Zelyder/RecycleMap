@@ -10,9 +10,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.mapbox.maps.MapView
-import com.mapbox.maps.Style
-import com.zelyder.recyclemap.R
 import com.zelyder.recyclemap.presentation.navigation.*
 import com.zelyder.recyclemap.presentation.ui.feed.FeedDetailsScreen
 import com.zelyder.recyclemap.presentation.ui.learn.LearnDetailsScreen
@@ -23,12 +20,8 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    var mapView: MapView? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mapView = findViewById(R.id.mapView)
-        mapView?.getMapboxMap()?.loadStyleUri(Style.MAPBOX_STREETS)
         setContent {
             RecycleMapTheme {
                 Surface(color = MaterialTheme.colors.background) {
@@ -74,4 +67,5 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
 }

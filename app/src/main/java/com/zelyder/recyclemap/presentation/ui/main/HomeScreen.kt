@@ -17,7 +17,7 @@ import com.zelyder.recyclemap.presentation.navigation.createExternalRouter
 import com.zelyder.recyclemap.presentation.ui.feed.FeedScreen
 import com.zelyder.recyclemap.presentation.ui.home.*
 import com.zelyder.recyclemap.presentation.ui.learn.LearnScreen
-import com.zelyder.recyclemap.presentation.ui.map.MapScreen
+import com.zelyder.recyclemap.presentation.ui.map.MyMap
 import com.zelyder.recyclemap.presentation.ui.theme.RecycleMapTheme
 
 @Composable
@@ -56,7 +56,7 @@ private fun Navigation(navController: NavHostController, router: Router) {
             FeedScreen(externalRouter = router)
         }
         composable(NavScreen.NavMapScreen.route) {
-            MapScreen()
+            MyMap.MapWebScreen()
         }
         composable(NavScreen.NavLearnScreen.route) {
             LearnScreen(externalRouter = router)
